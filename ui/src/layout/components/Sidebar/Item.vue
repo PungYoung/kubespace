@@ -18,14 +18,36 @@ export default {
 
     if (icon) {
       if (icon.includes('el-icon')) {
-        vnodes.push(<i class={[icon, 'sub-el-icon']} />)
+        const i  = createElement('i',{
+        attrs: {
+          'icon-class': icon
+        }
+      })
+      vnodes.push(i)
+        // vnodes.push(<i class={[icon, 'sub-el-icon']} />)
       } else {
-        vnodes.push(<svg-icon icon-class={icon}/>)
+        const svg_icon  = createElement('svg-icon',{
+        attrs: {
+          'icon-class': icon
+        }
+      })
+      vnodes.push(svg_icon)
+        // vnodes.push(<svg-icon icon-class={icon}/>)
       }
     }
 
     if (title) {
-      vnodes.push(<span slot='title' style='font-size: 14px;'>{(title)}</span>)
+
+      const span  = createElement('span',{
+        attrs: {
+           "slot":'title',
+           "style":"font-size: 14px;"
+        },
+        title
+      })
+      vnodes.push(span)
+
+      // vnodes.push(<span slot='title' style='font-size: 14px;'>{(title)}</span>)
     }
     return vnodes
   }

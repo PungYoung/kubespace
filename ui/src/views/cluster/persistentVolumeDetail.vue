@@ -19,7 +19,7 @@
           </el-form-item>
           <el-form-item label="访问模式">
             <template v-for="key in persistentVolume.spec.accessModes" >
-              <span :key="key" class="back-class">{{key}} <br/></span>
+              <span v-if="true" :key="key" class="back-class">{{key}} <br/></span>
             </template>
           </el-form-item>
           <el-form-item label="存储声明">
@@ -39,7 +39,7 @@
           <el-form-item label="标签">
             <span v-if="!persistentVolume.metadata.labels">——</span>
             <template v-else v-for="(val, key) in persistentVolume.metadata.labels" >
-              <span :key="key" class="back-class">{{key}}: {{val}} <br/></span>
+              <span v-if="true" :key="key" class="back-class">{{key}}: {{val}} <br/></span>
             </template>
           </el-form-item>
         </el-form>

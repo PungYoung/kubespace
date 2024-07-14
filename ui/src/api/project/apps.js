@@ -122,3 +122,16 @@ export function getAppChartFiles(versionId) {
     method: 'get'
   })
 }
+
+export function deleteRelease(versionId,version) {
+  return request({
+    url: `/apps/version/${versionId}/chartfiles`,
+    method: 'delete'
+  })
+}
+export function getRelease(versionId,version) {
+  return request({
+    url: `/apps/version/${versionId}/chartfiles`,
+    method: 'get'
+  })
+}

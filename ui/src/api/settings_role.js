@@ -39,4 +39,12 @@ export function deleteRoles(data) {
   })
 }
 
+export function hasPermission(data) {
+  return request({
+    url: '/settings_role/delete',
+    method: 'post',
+    data
+  })
+}
+
 

@@ -1,6 +1,6 @@
 import router from './router'
 import store from './store'
-import path from 'path'
+import path from 'path-browserify'
 import { Message } from 'element-ui'
 import { getToken } from '@/utils/auth' // get token from cookie
 
